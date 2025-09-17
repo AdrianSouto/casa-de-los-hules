@@ -1,0 +1,49 @@
+---
+import ServiceElement from "./components/ServiceElement.astro";
+import CarSvg from "./components/svg/CarSvg.astro";
+import FabrSvg from "./components/svg/FabrSvg.astro";
+import HuleSvg from "./components/svg/HuleSvg.astro";
+
+const services = [
+    {
+        img: HuleSvg,
+        name: "Hules industriales",
+        description: "Productos industriales de hule diseñados para durabilidad y eficiencia.",
+        link: "/services"
+    },
+    {
+        img: CarSvg,
+        name: "Productos Automotrices",
+        description: "Mejora y protege tu vehículo con nuestros productos de hule de alta calidad",
+        link: "/services"
+    },
+    {
+        img: FabrSvg,
+        name: "Fabricación a Medida",
+        description: "Fabricación de hule sobre diseño para satisfacer tus necesidades específicas",
+        link: "/services"
+    }
+]
+---
+
+<section class="flex flex-col items-center mt-32 h-dvh">
+    <h1 class="text-primary-black text-4xl font-bold">Nuestros servicios</h1>
+    <p class="">Ofrecemos una amplia variedad de servicios para adaptarnos a sus necesidades</p>
+
+    <div class="flex mt-20 bg-[#FFF5ED] h-1/2 p-6 w-full justify-around">
+        {
+            services.map((service, idx) => (
+                <ServiceElement link={service.link} name={service.name} description={service.description}>
+                    {
+                        idx === 0 ?
+                            <HuleSvg />
+                        : idx === 1 ?
+                            <CarSvg />
+
+                        :   <FabrSvg />
+                    }
+                </ServiceElement>
+            ))
+        }
+    </div>
+</section>

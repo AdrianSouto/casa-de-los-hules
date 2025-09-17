@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --color-primary-50: #F1F5FD;
+    --color-primary-100: #DFE9FA;
+    --color-primary-200: #C7D9F6;
+    --color-primary-300: #A0C0F0;
+    --color-primary-400: #739FE7;
+    --color-primary-500: #527EDF;
+    --color-primary-600: #3D61D3;
+    --color-primary-700: #344FC1;
+    --color-primary-800: #30429D;
+    --color-primary-900: #283673;
+    --color-primary-950: #1F264C;
+
+    --color-primary-black: #050316;
+
+    --color-background: #F9FCFD
+}
+
+@layer base {
+    button {
+        @apply hover:cursor-pointer hover:scale-105 transition-all w-fit px-4 py-2 rounded;
+    }
+    h1 {
+        @apply text-4xl font-bold;
+    }
+    p {
+        @apply mt-3 font-light leading-snug;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+        @apply text-primary-black;
+    }
+}

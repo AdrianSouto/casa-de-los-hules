@@ -1,0 +1,49 @@
+---
+import CompassSvg from "./components/svg/CompassSvg.astro";
+import PackageSvg from "./components/svg/PackageSvg.astro";
+import AwardSvg from "./components/svg/AwardSvg.astro";
+import FAQElement from "./components/FAQElement.astro";
+
+const faqs = [
+    {
+        title: "¿Ofrecen productos de diseño?",
+        description: "Sí, ofrecemos nuestro servicio de fabricación especial que se ajusten a tus necesidades específicas. Contáctanos para discutir tu proyecto.",
+        img: CompassSvg,
+    },
+    {
+        title: "¿Cómo puedo realizar un pedido?",
+        description: "Puedes realizar un pedido contactándonos directamente a través de nuestro formulario en la página de contacto, por teléfono o visitándonos en nuestra tienda en San Luis Potosí.",
+        img: PackageSvg,
+        link: "/contacto",
+    },
+    {
+        title: "¿Ofrecen garantía en sus productos?",
+        description: "Sí, todos nuestros productos están respaldados por una garantía de calidad, asegurando su durabilidad y desempeño. Para más detalles sobre la garantía específica de un producto, por favor contáctanos.",
+        img: AwardSvg,
+    }
+]
+
+---
+
+<section class="w-full mt-40 flex flex-col items-center h-dvh">
+    <div class="flex flex-col items-center space-y-5 h-1/5">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.3923 14.2498C14.7646 13.1916 15.4993 12.2993 16.4664 11.731C17.4335 11.1626 18.5706 10.9548 19.6762 11.1445C20.7818 11.3341 21.7846 11.9089 22.507 12.7671C23.2295 13.6253 23.6248 14.7114 23.6232 15.8332C23.6232 18.9998 18.8732 20.5832 18.8732 20.5832M18.9998 26.9165H19.0157M34.8332 18.9998C34.8332 27.7443 27.7443 34.8332 18.9998 34.8332C10.2553 34.8332 3.1665 27.7443 3.1665 18.9998C3.1665 10.2553 10.2553 3.1665 18.9998 3.1665C27.7443 3.1665 34.8332 10.2553 34.8332 18.9998Z" stroke="#FB7F40" stroke-width="4.75" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <h1 class="text-3xl">Preguntas frecuentes</h1>
+    </div>
+    <div class="flex space-x-10 justify-center mx-20 h-2/3 pb-20">
+        {
+            faqs.map((faq, index) => (
+                    <FAQElement
+                            img={faq.img}
+                            link={faq.link}
+                            title={faq.title}
+                            description={faq.description}
+                            classname={index === 1 ? "bg-[#CFD5E1] scale-100" : "bg-white scale-95"}
+                    />
+            ))
+        }
+    </div>
+</section>

@@ -1,0 +1,24 @@
+---
+
+interface Props {
+    img: any;
+    title: string;
+    description: string;
+    link?: string;
+    classname?: string
+}
+
+const {img: ImageComponent, title, description, link, classname} = Astro.props as Props;
+---
+
+<article class={`flex flex-col w-1/3 items-center py-10 justify-around rounded-2xl ${classname}`}>
+    <ImageComponent />
+    <h3 class="font-bold text-lg">{title}</h3>
+    <p class="w-3/4 text-center text-sm text-pretty">{description}</p>
+    {link &&
+        <button class="font-semibold text-white bg-primary-900 shadow-lg shadow-primary-800/50">
+            Realizar pedido
+        </button>
+    }
+
+</article>

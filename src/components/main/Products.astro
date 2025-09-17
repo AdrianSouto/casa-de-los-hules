@@ -1,0 +1,97 @@
+---
+import ProductElement from "./components/ProductElement.astro";
+import HulesRolloImg from "../../assets/hules-rollo.jpg"
+import HulesPlacaImg from "../../assets/hules-placa.png"
+const products = [
+    {
+        img: HulesRolloImg,
+        name: "Hule en Rollo",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesPlacaImg,
+        name: "Hule en Placa",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesRolloImg,
+        name: "Hule en Rollo",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesPlacaImg,
+        name: "Hule en Placa",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesRolloImg,
+        name: "Hule en Rollo",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesPlacaImg,
+        name: "Hule en Placa",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesRolloImg,
+        name: "Hule en Rollo",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesPlacaImg,
+        name: "Hule en Placa",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+    {
+        img: HulesRolloImg,
+        name: "Hule en Rollo",
+        description: "Contamos con materiales como el Neopreno SBR, Hule Ambar Natural, Nitrilo y EPDM que son usados en la industria para uso de empaques o sellos.",
+        link: "/",
+    },
+]
+---
+
+<section class="h-fit w-full px-16">
+    <div class="flex justify-between">
+        <div class="w-full">
+            <h1>Productos</h1>
+            <p class="max-w-1/2">Conforme su pedido con nuestros productos de excelente calidad</p>
+        </div>
+        <div class="w-full flex justify-end items-center">
+            <button class="font-semibold text-white bg-primary-900 shadow-lg shadow-primary-800/50">
+                Ver todos los productos
+            </button>
+        </div>
+    </div>
+    <div class="relative h-fit">
+        <div class="grid grid-cols-2 mt-20 gap-x-20 gap-y-8 pb-5">
+            {
+                products.map((p) => (
+                        <ProductElement img={p.img} name={p.name} description={p.description} link={p.link} />
+                ))
+            }
+        </div>
+        <div class="absolute size-full bg-gradient-to-b from-transparent via-50% via-background/60 to-80% from-40% to-background top-0 flex flex-col justify-end items-center">
+            <div class="flex flex-col items-center space-y-10 w-1/4">
+                <h2 class="text-primary-black text-2xl font-bold text-center">
+                    Explore nuestro catálogo de productos
+                </h2>
+                <button class="font-semibold text-white bg-primary-900 shadow-lg shadow-primary-800/50">
+                    Ver todos los productos
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+</section>

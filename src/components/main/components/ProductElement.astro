@@ -1,0 +1,23 @@
+---
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+    img: ImageMetadata;
+    name: string;
+    description: string;
+    link: string;
+}
+
+const {img, name, description, link} = Astro.props as Props;
+---
+
+<article class="flex space-x-6 w-3/4 h-32">
+    <img src={img.src} alt={name} class="rounded-l-xl" />
+    <div class="flex flex-col">
+        <div class="flex flex-col">
+            <h5 class="font-bold">{name}</h5>
+            <p class="font-light text-sm text-pretty line-clamp-2">{description}</p>
+        </div>
+        <button class="bg-[#FAEDE4] py-2 text-sm self-end mt-5">Ver detalles</button>
+    </div>
+</article>
