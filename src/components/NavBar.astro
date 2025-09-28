@@ -24,11 +24,11 @@ const screens = [
 ]
 ---
 
-<nav class="flex h-20 px-10 py-5 justify-between fixed bg-background w-full top-0 z-100">
-    <div class="flex items-center space-x-5">
+<nav class="flex h-20 px-10 py-5 justify-between fixed bg-background w-full top-0 z-100 backdrop-blur-lg">
+    <a class="flex items-center space-x-5" href="/">
         <img src="/la-casa-de-los-hules-logo.webp" alt="Logo de la casa de los hules" class="rounded" width="80" height="20"/>
         <h2 class="text-2xl text-primary-800 font-black">La Casa de los Hules</h2>
-    </div>
+    </a>
     <div class="flex items-center space-x-10">
         <div class="flex items-center space-x-5">
             {
@@ -43,9 +43,9 @@ const screens = [
                 ))
             }
         </div>
-        <button class="font-semibold text-white bg-primary-900 w-fit px-4 py-2 rounded shadow-lg shadow-primary-800/50 flex items-center">
+        <a class="button font-semibold text-white bg-primary-900 w-fit px-4 py-2 rounded shadow-lg shadow-primary-800/50 flex items-center">
             Contactar ahora
-        </button>
+        </a>
     </div>
 
 </nav>

@@ -1,0 +1,26 @@
+---
+import StarSvg from "./svg/StarSvg.astro";
+interface Props {
+    name: string
+    text: string
+    rating: number
+    img: string
+}
+const {name, text, rating, img} = Astro.props as Props;
+---
+
+<article class="flex space-x-3">
+    <img src={img} width="80" class="h-fit" alt={name} />
+    <div class="flex flex-col">
+        <h5>{name}</h5>
+        <div class="flex space-x-[2px]">
+            {
+                [...Array(rating)].map((_) => (
+                        <StarSvg width={10} height={9} />
+                ))
+            }
+        </div>
+        <p class="font-light text-sm opacity-85 mt-2">{text}</p>
+    </div>
+
+</article>

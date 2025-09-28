@@ -1,0 +1,94 @@
+---
+
+import StarSvg from "./components/svg/StarSvg.astro";
+import MailSvg from "./components/svg/MailSvg.astro";
+import ClientRatingElement from "./components/ClientRatingElement.astro";
+import LocationSvg from "./components/svg/LocationSvg.astro";
+import CesarRinconImg from "../../assets/cesar-rincon.png";
+import SimonLohmannImg from "../../assets/simon-lohmann.png";
+import TobeMokoloImg from "../../assets/tobe-mokolo.png";
+
+const rating = [
+    {
+        name: "César Rincón",
+        text: "Excelente servicio, la mejor atención",
+        rating: 5,
+        img: CesarRinconImg.src,
+    },
+    {
+        name: "Simon Lohmann",
+        text: "Son los mejores, materiales de excelente calidad",
+        rating: 4,
+        img: SimonLohmannImg.src,
+    },
+    {
+        name: "Tobe Mokolo",
+        text: "Muy contento, espero volver a hacer negocios pronto",
+        rating: 5,
+        img: TobeMokoloImg.src,
+    }
+]
+---
+<section class="size-full flex flex-col justify-around">
+    <div class="flex flex-col space-y-1">
+        <h1>Sobre nosotros</h1>
+        <div class="flex space-x-1">
+            {
+                [...Array(5)].map((_) => (
+                        <StarSvg />
+                ))
+            }
+        </div>
+    </div>
+
+    <div>
+        <p class="text-pretty">
+            Tenemos la completa <span class="font-semibold">disponibilidad</span> y la <span class="font-semibold">capacidad</span> para cumplir con sus requerimientos más específicos, tanto al <span class="font-semibold">mayoreo</span> como al <span class="font-semibold">menudeo</span>.
+            Gracias a ello es que <span class="font-semibold">cientos de clientes</span> han preferido nuestro trabajo a lo largo de los años y nos han recomendado ampliamente
+        </p>
+        <div class="flex mt-10">
+            {
+                rating.map(client => (
+                        <ClientRatingElement
+                                name={client.name}
+                                text={client.text}
+                                rating={client.rating}
+                                img={client.img}
+                        />
+                ))
+            }
+        </div>
+
+        <p class="mt-10">
+            Nuestro compromiso con la <span class="font-semibold">excelencia</span> y la <span class="font-semibold">innovación</span> nos permite brindar <span class="font-semibold">soluciones duraderas y personalizadas</span>, asegurando la total satisfacción
+            de nuestros clientes. En La Casa de Los Hules creemos que <span class="font-semibold">cubrir al 100% las necesidades de nuestros clientes</span> es la clave del éxito como empresa.
+            Es por esta razón que contamos con una selecta gama de productos a tu disposición.
+        </p>
+    </div>
+
+    <div class="flex justify-between">
+        <div class="flex flex-col space-y-6">
+            <article class="flex flex-col">
+                <h3 class="font-bold !text-white">Ubicación:</h3>
+                <div class="flex space-x-2 mt-3 items-start">
+                    <LocationSvg />
+                    <div>
+                        <p class="!text-white font-semibold text-sm">Pedro Montoya 585, 78049</p>
+                        <p class="text-sm mt-1">Calle 5 de Mayo #123, Col. Centro, San Luis Potosí, S.L.P.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flex flex-col">
+                <h3 class="font-bold !text-white">Ubicación:</h3>
+                <div class="flex space-x-2 mt-3">
+                    <MailSvg />
+                    <p class="!text-white font-semibold text-sm">horacior.cdh@gmail.com</p>
+                </div>
+            </article>
+        </div>
+
+
+    </div>
+
+
+</section>

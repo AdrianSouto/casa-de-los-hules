@@ -1,0 +1,56 @@
+---
+
+import MailPlusSvg from "./components/svg/MailPlusSvg.astro";
+import FacebookSvg from "./components/svg/FacebookSvg.astro";
+import WhatsappSvg from "./components/svg/WhatsappSvg.astro";---
+<section class="size-full flex justify-center">
+    <div class="flex flex-col justify-around w-3/4 h-full">
+        <div class="flex flex-col space-y-1">
+            <h1>
+                Contáctanos
+            </h1>
+            <p>Contáctanos para conocer más sobre nuestros productos</p>
+        </div>
+
+        <div class="flex flex-col space-y-5">
+            <div class="flex flex-col">
+                <label for="nombre">Nombre <span class="!text-red-400">*</span></label>
+                <input id="nombre" name="nombre" placeholder="Escribe tu nombre..." class="bg-background rounded mt-1 !text-primary-black py-1 px-2" />
+            </div>
+            <div class="flex-col flex">
+                <label for="correo">Correo electrónico <span class="!text-red-400">*</span></label>
+                <input id="correo" name="correo" type="email" class="bg-background rounded mt-1 !text-primary-black" />
+            </div>
+            <div class="flex-col flex">
+                <label for="mensaje">Mensaje <span class="!text-red-400">*</span></label>
+                <textarea id="mensaje" name="mensaje" class="bg-background rounded mt-1 !text-primary-black" />
+            </div>
+
+
+
+            <a class="button font-bold !text-primary-black bg-[#A0C0F0] shadow-lg shadow-primary-800/50 self-end mt-6 flex gap-x-3 items-center">
+                Enviar correo
+                <span class="w-[2px] h-full bg-primary-black rounded-full" />
+                <MailPlusSvg />
+            </a>
+        </div>
+        <div class="flex flex-col space-y-8">
+            <h3 class="text-lg font-bold !text-white">
+                También puede comunicarse a través de nuestras redes sociales:
+            </h3>
+            <div class="flex space-x-6">
+                <a class="button rounded-lg bg-[#EFF6FF] !text-[#001633] font-bold flex gap-3 shadow-lg shadow-[#EFF6FF]/40">
+                    <FacebookSvg />
+                    Facebook
+                </a>
+                <a class="button rounded-lg bg-[#F0FDF4] !text-[#062D12] font-bold flex gap-3 shadow-lg shadow-[#EFF6FF]/40">
+                    <WhatsappSvg />
+                    Whatsapp
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

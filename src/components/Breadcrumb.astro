@@ -1,0 +1,21 @@
+---
+const {path} = Astro.props as {path: { name: string, link: string }[]};
+---
+
+<nav aria-label="breadcrumb">
+    <ol class="text-[#661800]">
+        {path.map((item, index) => (
+            <li class={index < path.length - 1 ? "inline" : "inline font-bold "}>
+                {index < path.length - 1 ? (
+                    <>
+                        <a href={item.link} class=" hover:underline">{item.name}</a>
+                        <span class="mx-1">></span>
+                    </>
+                ) : (
+                    <span>{item.name}</span>
+                )}
+            </li>
+        ))
+        }
+    </ol>
+</nav>

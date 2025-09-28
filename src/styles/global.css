@@ -20,14 +20,14 @@
 }
 
 @layer base {
-    button {
+    .button {
         @apply hover:cursor-pointer hover:scale-105 transition-all w-fit px-4 py-2 rounded;
     }
     h1 {
         @apply text-4xl font-bold;
     }
     p {
-        @apply mt-3 font-light leading-snug;
+        @apply font-light leading-snug;
     }
     h1, h2, h3, h4, h5, h6, p {
         @apply text-primary-black;

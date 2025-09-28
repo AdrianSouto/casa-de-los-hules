@@ -1,0 +1,18 @@
+---
+import About from "./About.astro";
+import Contact from "./Contact.astro";
+---
+
+<footer class="bg-[#111111] flex flex-col [&_*]:text-[#DADADA] px-10 pt-20">
+    <div class="flex h-full">
+        <About />
+        <div class="h-2/3 flex items-center">
+            <div class="h-48 w-1 bg-white rounded-full mx-10 self-center"/>
+        </div>
+        <Contact />
+    </div>
+    <div class="w-full flex justify-center py-4">
+        <span class="font-light italic text-sm">© 2024 - 2025 La Casa de los Hules</span>
+    </div>
+
+</footer>

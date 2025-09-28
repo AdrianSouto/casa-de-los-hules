@@ -16,9 +16,9 @@ const {img: ImageComponent, title, description, link, classname} = Astro.props a
     <h3 class="font-bold text-lg">{title}</h3>
     <p class="w-3/4 text-center text-sm text-pretty">{description}</p>
     {link &&
-        <button class="font-semibold text-white bg-primary-900 shadow-lg shadow-primary-800/50">
+        <a class="button font-semibold text-white bg-primary-900 shadow-lg shadow-primary-800/50">
             Realizar pedido
-        </button>
+        </a>
     }
 
 </article>
