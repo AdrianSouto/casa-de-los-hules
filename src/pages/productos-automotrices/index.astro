@@ -3,9 +3,9 @@
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import Strength from "../../components/assets/Strength.astro";
-import Quality from "../../components/assets/Quality.astro";
-import Variety from "../../components/assets/Variety.astro";
-import MailPlusSvg from "../../components/main/components/svg/MailPlusSvg.astro";
+import Quality from "../../assets/chart-super.svg";
+import Protection from "../../assets/shield-check.svg";
+import Functionality from "../../assets/sparkles.svg";
 import MailSvg from "../../assets/mail-outline.svg";
 import ProductElement from "../../components/main/components/ProductElement.astro";
 import HulesRolloImg from "../../assets/hules-rollo.jpg"
@@ -13,7 +13,7 @@ import HulesPlacaImg from "../../assets/hules-placa.png"
 
 const path = [
     { name: "Inicio", link: "/" },
-    { name: "Hules industriales", link: "/hules-industriales" }
+    { name: "Hules automotrices", link: "/hules-automotrices" }
 ]
 
 const products = [
@@ -79,26 +79,25 @@ const products = [
         <div class="flex w-full mt-10">
             <div class="flex flex-col space-y-6 w-full">
                 <Breadcrumb path={path} />
-                <h1 transition:name={`service-hules-industriales`}>
-                    Hules industriales
+                <h1 transition:name={`service-hules-automotrices`}>
+                    Hules automotrices
                 </h1>
                 <p class="w-3/4 text-pretty">
-                    En La Casa de los Hules, ofrecemos una amplia gama de hules industriales de hule, diseñados para cumplir con las especificaciones más exigentes y garantizar la máxima durabilidad. Nuestros productos son ideales para todo tipo de industrias, proporcionando soluciones eficaces y personalizadas.
-                </p>
+                    Nuestra selección de productos para automóviles incluye desde hules misceláneos hasta empaques de puertas y ventanas, todos fabricados con hule de la más alta calidad. Estos accesorios no solo protegen sino que también mejoran la estética de tu vehículo, asegurando un ajuste perfecto y una larga vida útil.                </p>
             </div>
             <div class="w-full flex flex-col justify-center items-center mt-6">
                 <div class="flex space-x-6 w-fit">
                     <article class="flex flex-col text-center space-y-6 items-center w-42">
-                        <Strength />
-                        <h4 class="font-bold">Durabilidad garantizada</h4>
+                        <Quality />
+                        <h4 class="font-bold">Calidad superior</h4>
                     </article>
                     <article class="flex text-center flex-col space-y-6 items-center w-42">
-                        <Quality />
-                        <h4 class="font-bold">Calidad del producto</h4>
+                        <Protection />
+                        <h4 class="font-bold">Protección completa</h4>
                     </article>
                     <article class="flex flex-col space-y-6 text-center items-center w-42">
-                        <Variety />
-                        <h4 class="font-bold">Variedad para todas las industrias</h4>
+                        <Functionality />
+                        <h4 class="font-bold">Estética y funcionalidad</h4>
                     </article>
                 </div>
 
